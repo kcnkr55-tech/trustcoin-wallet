@@ -1,0 +1,315 @@
+.dashboard {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.light-mode .card {
+  background: white;
+}
+
+.dark-mode .card {
+  background: #2a2a2a;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #667eea;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.wallet-section {
+  margin: 2rem 0;
+}
+
+.wallet-address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.light-mode .wallet-address {
+  background: #f9f9f9;
+}
+
+.dark-mode .wallet-address {
+  background: #333;
+  border-color: #555;
+}
+
+.wallet-address button {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wallet-address button:hover {
+  background: #764ba2;
+}
+
+.admin-form {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.light-mode .admin-form {
+  background: white;
+}
+
+.dark-mode .admin-form {
+  background: #2a2a2a;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.light-mode .form-group input,
+.light-mode .form-group textarea,
+.light-mode .form-group select {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea,
+.dark-mode .form-group select {
+  background: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.admin-funds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.light-mode .transactions-table th {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.dark-mode .transactions-table th {
+  background: #333;
+  color: #f0f0f0;
+}
+
+.transactions-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.kyc-panel {
+  margin-top: 2rem;
+}
+
+.kyc-request {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+}
+
+.light-mode .kyc-request {
+  background: #f9f9f9;
+}
+
+.dark-mode .kyc-request {
+  background: #333;
+}
+
+.kyc-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.kyc-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.kyc-approve {
+  background: #28a745;
+  color: white;
+}
+
+.kyc-approve:hover {
+  background: #218838;
+}
+
+.kyc-reject {
+  background: #dc3545;
+  color: white;
+}
+
+.kyc-reject:hover {
+  background: #c82333;
+}
+
+.support-ticket {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+}
+
+.light-mode .support-ticket {
+  background: #f9f9f9;
+}
+
+.dark-mode .support-ticket {
+  background: #333;
+}
