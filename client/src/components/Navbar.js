@@ -9,23 +9,27 @@ function Navbar({ user, onLogout, theme, onThemeToggle }) {
 
   return (
     <nav className="navbar">
-      <h1 onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>🪙 TrustCoinWallet</h1>
+      <h1 onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>🏦 TrustCoinWallet</h1>
+      <div className="navbar-center">
+        <button onClick={() => navigate('/weather')} className="nav-btn">🌤️ Weather</button>
+        <button onClick={() => navigate('/jokes')} className="nav-btn">😂 Jokes</button>
+      </div>
       <div className="navbar-actions">
         <span style={{ marginRight: '1rem' }}>{user?.email}</span>
         {user?.role === 'admin' && (
           <>
-            <button onClick={() => navigate('/admin/fund-transfer')}>💰 Transfer Funds</button>
-            <button onClick={() => navigate('/')}>📊 Admin Panel</button>
+            <button onClick={() => navigate('/admin/fund-transfer')} className="nav-btn">💰 Transfer Funds</button>
+            <button onClick={() => navigate('/')} className="nav-btn">📊 Admin Panel</button>
           </>
         )}
         <div className="notification-icon" onClick={() => setNotifications(0)}>
           <FiBell size={24} />
           {notifications > 0 && <span className="notification-badge">{notifications}</span>}
         </div>
-        <button onClick={onThemeToggle} title="Toggle Theme">
+        <button onClick={onThemeToggle} title="Toggle Theme" className="theme-btn">
           {theme === 'light' ? <FiMoon /> : <FiSun />}
         </button>
-        <button onClick={onLogout} title="Logout">
+        <button onClick={onLogout} title="Logout" className="logout-btn">
           <FiLogOut /> Logout
         </button>
       </div>

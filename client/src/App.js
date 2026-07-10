@@ -5,6 +5,8 @@ import Auth from './pages/Auth';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminFundTransfer from './pages/AdminFundTransfer';
+import WeatherDashboard from './pages/WeatherDashboard';
+import JokeGenerator from './pages/JokeGenerator';
 import Navbar from './components/Navbar';
 import './App.css';
 
@@ -92,6 +94,22 @@ function App() {
             <AdminFundTransfer token={token} />
           ) : (
             <Navigate to="/" />
+          )}
+        />
+        <Route
+          path="/weather"
+          element={token ? (
+            <WeatherDashboard />
+          ) : (
+            <Navigate to="/auth" />
+          )}
+        />
+        <Route
+          path="/jokes"
+          element={token ? (
+            <JokeGenerator />
+          ) : (
+            <Navigate to="/auth" />
           )}
         />
       </Routes>
